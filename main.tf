@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "null_resource" "example" {
   provisioner "local-exec" {
-    command = "echo Hellooo, Atlantisssssssss!"
+    command = "echo Hellooo, Atlantisssssssaaa!"
   }
 }
 
