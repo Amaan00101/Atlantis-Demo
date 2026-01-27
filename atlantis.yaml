@@ -1,0 +1,12 @@
+version: 3
+
+projects:
+  - name: EIC-Internal-Atlatis-Demo
+    dir: .
+    terraform_version: v1.3.2
+    autoplan:
+      when_modified:
+        - "*.tf"
+        - "*.tfvars"
+        - "*/*.tfvars"
+      enabled: true

@@ -1,0 +1,18 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo Hellooo, Atlantisssssssss!"
+  }
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0b6c6ebed2801a5cb"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "terraform-test"
+  }
+}
